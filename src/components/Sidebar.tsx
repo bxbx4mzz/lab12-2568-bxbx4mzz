@@ -56,7 +56,7 @@ export default function Sidebar({ userName, type }: SidebarComponentProps) {
               component="a"
               href="https://github.com/bxbx4mzz"
               target="_blank"
-              src="public\me.jpg"
+              src="me.jpg"
             />
           </Indicator>
           {type && (
