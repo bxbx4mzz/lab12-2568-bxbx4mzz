@@ -7,8 +7,6 @@ import {
   Indicator,
   Text,
   Group,
-  getSize,
-  getFontSize,
 } from "@mantine/core";
 interface SidebarComponentProps {
   userName: string;
