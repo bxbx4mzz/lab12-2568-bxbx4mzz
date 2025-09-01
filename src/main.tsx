@@ -8,10 +8,15 @@ import { MantineProvider, createTheme, virtualColor } from "@mantine/core";
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
   colors: {
-    chanadda: virtualColor({
-      name: "chanadda",
-      dark: "pink",
-      light: "cyan",
+    // beam: virtualColor({
+    //   name: "beam",
+    //   dark: "pink",
+    //   light: "cyan",
+    // }),
+    wiphawee: virtualColor({
+      name: "wiphawee",
+      dark: "yellow",
+      light: "violet",
     }),
   },
 });

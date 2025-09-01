@@ -14,6 +14,7 @@ import { IconTrash } from "@tabler/icons-react";
 import { LoremIpsum } from "lorem-ipsum";
 import { randomId } from "@mantine/hooks";
 import { v4 as uuidv4 } from "uuid";
+
 interface Task {
   id: string;
   title: string;
@@ -88,7 +89,9 @@ export default function HomePage() {
           All : {tasks.length} | Done : {tasks.filter((t) => t.isDone).length}
         </Text>
         {/* เพิ่ม Task */}
-        <Button onClick={handleAdd}>Add Task</Button>
+        <Button onClick={handleAdd} color="cyan">
+          Add Task
+        </Button>
         {/* แสดง Task Cards */}
         <Stack w="100%">
           {tasks.map((task) => (
@@ -112,13 +115,15 @@ export default function HomePage() {
                     </Text>
                   )}
                   {/* แสดง Date & Time */}
-                  <Text size="xs" c="gray">
-                    Done at:
-                  </Text>
+                  {task.isDone && (
+                    <Text size="xs" c="wiphawee">
+                      Done at: {new Date().toLocaleString()}
+                    </Text>
+                  )}
                 </Stack>
                 {/* แสดง Button Done & Button Delete */}
                 <Group>
-                  <Button
+                  {/* <Button
                     style={{
                       backgroundColor: "#71c32fda",
                       color: "#dce6e7ff",
@@ -128,15 +133,27 @@ export default function HomePage() {
                     onClick={() => toggleDoneTask(task.id)}
                   >
                     Done
-                  </Button>
-                  <Button
-                    color="chanadda"
+                  </Button> */}
+                  <Checkbox
+                    label="Done"
+                    color="cyan"
+                    onClick={() => toggleDoneTask(task.id)}
+                  />
+                  {/* <Button
+                    color="beam"
                     variant="light"
                     size="xs"
                     onClick={() => deleteTask(task.id)}
                   >
-                    Delete
-                  </Button>
+                  </Button> */}
+                  <ActionIcon
+                    variant="light"
+                    color="red"
+                    aria-label="Settings"
+                    onClick={() => deleteTask(task.id)}
+                  >
+                    <IconTrash stroke={2} />
+                  </ActionIcon>
                 </Group>
               </Group>
             </Card>

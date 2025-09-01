@@ -7,13 +7,15 @@ import {
   Indicator,
   Text,
   Group,
+  getSize,
+  getFontSize,
 } from "@mantine/core";
-interface SidebarComponentProps  {
+interface SidebarComponentProps {
   userName: string;
-  type?: "admin" |"student";
+  type?: "admin" | "student";
 }
-export type { SidebarProps };
-export default function Sidebar() {
+export type { SidebarComponentProps };
+export default function Sidebar({ userName, type }: SidebarComponentProps) {
   return (
     <Stack
       align="stretch"
@@ -43,7 +45,28 @@ export default function Sidebar() {
       </Box>
       {/* แสดงผู้ใช้งาน */}
       <Box p={10}>
-        <Text>chanadda</Text>
+        <Group>
+          <Indicator
+            inline
+            size={12}
+            offset={4}
+            position="bottom-end"
+            color="green"
+            withBorder
+          >
+            <Avatar
+              component="a"
+              href="https://github.com/bxbx4mzz"
+              target="_blank"
+              src="public\me.jpg"
+            />
+          </Indicator>
+          {type && (
+            <Text size="sm">
+              User : {userName} : {type}{" "}
+            </Text>
+          )}
+        </Group>
       </Box>
     </Stack>
   );

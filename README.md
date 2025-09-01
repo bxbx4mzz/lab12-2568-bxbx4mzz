@@ -1,11 +1,10 @@
 # Lab12 : Todo List with Mantine (Part 1)
 
-ชื่อ-สกุล :
+ชื่อ-สกุล : Wiphawee Chaikham
 
-รหัสนักศึกษา :
+รหัสนักศึกษา : 670610733
 
 ---
-
 
 After cloning repository, open the project with VSCode and run the following commands in terminal:
 
@@ -14,6 +13,7 @@ pnpm install
 pnpm run dev
 
 ```
+
 ให้นักศึกษาสร้างหน้าเว็บ Todo List โดยใช้ความรู้เรื่อง React + Mantine ui Libary
 
 [คลิกเพื่อดูรายละเอียด](https://o365cmu-my.sharepoint.com/:b:/g/personal/dome_potikanond_cmu_ac_th/EUIdGduZBY5NqejhMSTZM-ABkf8qWfz74_IP0sbHUDdfng?e=5mdnwE)
@@ -21,7 +21,6 @@ pnpm run dev
 หลังจาก Deploy ด้วย Vercel แล้ว ให้แปะ `Vercel URL` และลิงค์ `GitHub Repo URL` ของน.ศ. ไว้ใน Spreadsheet ด้านล่าง
 
 [คลิกเพื่อเปิด Spreadsheet](https://o365cmu-my.sharepoint.com/:x:/g/personal/dome_potikanond_cmu_ac_th/ETFvzKA2h2lKk-3ktumEanUBRtX4sAvNHk-ssok3MFwYOg)
-
 
 # React + Mantine Starter
 
